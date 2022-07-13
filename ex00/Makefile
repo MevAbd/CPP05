@@ -1,10 +1,5 @@
 SRC =	main.cpp \
-		Animal.cpp \
-		WrongAnimal.cpp \
-		Cat.cpp \
-		WrongCat.cpp \
-		Dog.cpp \
-		Brain.cpp
+		Bureaucrat.cpp
 
 OBJ = $(patsubst %.cpp,$(OBJ_DIR)%.o,${SRC})
 SRC_DIR	= src/
@@ -19,7 +14,7 @@ $(OBJ_DIR)%.o	: %.cpp
 				mkdir -p $(OBJ_DIR)
 				c++ $(FLAGS) -c $< -I$(INC_DIR) -o $@
 
-NAME =  Abstract
+NAME =  Bureaucrat
 
 all = $(NAME)
 
