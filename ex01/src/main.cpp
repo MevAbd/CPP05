@@ -6,7 +6,7 @@
 /*   By: malbrand <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/13 11:58:54 by malbrand          #+#    #+#             */
-/*   Updated: 2022/07/13 19:01:06 by malbrand         ###   ########.fr       */
+/*   Updated: 2022/07/14 07:53:56 by malbrand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,8 +30,13 @@ void	instantiate(void)
 	std::cout << "A grade sign  = " << form_a.getGradeSign() << std::endl;
 	std::cout << "A grade ex  = " << form_a.getGradeEx() << std::endl;
 	std::cout << "A signed  = " << form_a.getSigned() << std::endl;
-	
+	std::cout << std::endl;
 
+	std::cout << "B name = " << form_b.getName() << std::endl;
+	std::cout << "B grade sign  = " << form_b.getGradeSign() << std::endl;
+	std::cout << "B grade ex  = " << form_b.getGradeEx() << std::endl;
+	std::cout << "B signed  = " << form_b.getSigned() << std::endl;
+	std::cout << std::endl;
 }
 
 void	besigned_ok(void)
@@ -39,6 +44,7 @@ void	besigned_ok(void)
 	const Bureaucrat	bur("lala", 75);
 	Form		form_a;
 
+	std::cout << "A signed  = " << form_a.getSigned() << std::endl;
 	form_a.beSigned(bur);
 	std::cout << "A signed  = " << form_a.getSigned() << std::endl;
 	std::cout << std::endl;
@@ -49,33 +55,53 @@ void	besigned_nop(void)
 	const Bureaucrat	burbur("bis", 126);
 	Form		form_a;
 
+	std::cout << "A signed  = " << form_a.getSigned() << std::endl;
 	form_a.beSigned(burbur);
 	std::cout << "A signed  = " << form_a.getSigned() << std::endl;
 	std::cout << std::endl;
 }
-/*
-void	lessless(void)
+
+void	signForm_ok(void)
 {
-	Bureaucrat	min("MIN", 146);
-	std::cout << std::endl;
-	for (int i = 0; i < 6; i++)
-	{
-		std::cout << min << std::endl;
-		min.downGrade();
-	}
+	const Bureaucrat	bur("lala", 75);
+	Form		form_a;
+
+	std::cout << "A signed  = " << form_a.getSigned() << std::endl;
+	bur.signForm(form_a);
+	std::cout << "A signed  = " << form_a.getSigned() << std::endl;
 	std::cout << std::endl;
 }
 
-void	moreThanMax(void)
-{	
-	Bureaucrat	maxmax("MAXMAX", -6);
+void	signForm_nop(void)
+{
+	const Bureaucrat	burbur("bis", 126);
+	Form		form_a;
+
+	std::cout << "A signed  = " << form_a.getSigned() << std::endl;
+	burbur.signForm(form_a);
+	std::cout << "A signed  = " << form_a.getSigned() << std::endl;
+	std::cout << std::endl;
 }
 
-void	lessThanMin(void)
-{	
-	Bureaucrat	minmin("MINMIN", 169);
+void	gradeSignHigh(void)
+{
+	Form	form("Form", 0, 75);
 }
-*/
+
+void	gradeSignLow(void)
+{
+	Form	form("Form", 151, 75);
+}
+
+void	gradeExHigh(void)
+{
+	Form	form("Form", 75, 0);
+}
+
+void	gradeExLow(void)
+{
+	Form	form("Form", 75, 151);
+}
 
 int	main(void)
 {
@@ -109,22 +135,64 @@ int	main(void)
 		std::cout << e.what() << std::endl;
 	}
 	std::cout << std::endl;
-/*	try
+	std::cout << "-------------------------Le Bureaucrat peut signer--------------------------------" << std::endl;
+	try
 	{
-		moreThanMax();
+		signForm_ok();
 	}
 	catch (std::exception &e)
 	{
 		std::cout << e.what() << std::endl;
 	}
 	std::cout << std::endl;
+	std::cout << "-------------------------Le Bureaucrat ne peut pas signer--------------------------------" << std::endl;
 	try
 	{
-		lessThanMin();
+		signForm_nop();
 	}
 	catch (std::exception &e)
 	{
 		std::cout << e.what() << std::endl;
-	}*/
+	}
+	std::cout << std::endl;
+	std::cout << "-------------------------Grade de signature trop haut--------------------------------" << std::endl;
+	try
+	{
+		gradeSignHigh();
+	}
+	catch (std::exception &e)
+	{
+		std::cout << e.what() << std::endl;
+	}
+	std::cout << std::endl;
+	std::cout << "-------------------------Grade de signature trop bas--------------------------------" << std::endl;
+	try
+	{
+		gradeSignLow();
+	}
+	catch (std::exception &e)
+	{
+		std::cout << e.what() << std::endl;
+	}
+	std::cout << std::endl;
+	std::cout << "-------------------------Grade d'execution trop haut--------------------------------" << std::endl;
+	try
+	{
+		gradeExHigh();
+	}
+	catch (std::exception &e)
+	{
+		std::cout << e.what() << std::endl;
+	}
+	std::cout << std::endl;
+	std::cout << "-------------------------Grade d'execution trop bas--------------------------------" << std::endl;
+	try
+	{
+		gradeExLow();
+	}
+	catch (std::exception &e)
+	{
+		std::cout << e.what() << std::endl;
+	}
 	return (0);
 }

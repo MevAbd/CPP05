@@ -15,7 +15,7 @@ $(OBJ_DIR)%.o	: %.cpp
 				mkdir -p $(OBJ_DIR)
 				c++ $(FLAGS) -c $< -I$(INC_DIR) -o $@
 
-NAME =  Bureaucrat
+NAME =  Form
 
 all = $(NAME)
 

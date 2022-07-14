@@ -2,7 +2,8 @@ SRC =	main.cpp \
 		Bureaucrat.cpp \
 		AForm.cpp \
 		ShrubberyCreationForm.cpp \
-		RobotomyRequestForm.cpp
+		RobotomyRequestForm.cpp \
+		PresidentialPardonForm.cpp
 
 OBJ = $(patsubst %.cpp,$(OBJ_DIR)%.o,${SRC})
 SRC_DIR	= src/

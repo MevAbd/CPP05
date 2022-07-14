@@ -6,7 +6,7 @@
 /*   By: malbrand <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/12 15:48:50 by malbrand          #+#    #+#             */
-/*   Updated: 2022/07/14 08:28:45 by malbrand         ###   ########.fr       */
+/*   Updated: 2022/07/14 13:43:11 by malbrand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,7 @@ class Bureaucrat
 				void		upGrade(void);
 				void		downGrade(void);
 				void		signAForm(AForm &rhs) const;
+				void		executeForm(AForm const &form);
 
 				int			getGrade(void) const;
 

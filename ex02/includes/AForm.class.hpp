@@ -6,7 +6,7 @@
 /*   By: malbrand <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/13 17:24:01 by malbrand          #+#    #+#             */
-/*   Updated: 2022/07/14 12:59:38 by malbrand         ###   ########.fr       */
+/*   Updated: 2022/07/14 13:38:02 by malbrand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,10 +58,6 @@ class AForm
 				{
 					const char *what() const throw() {return "AForm : Form isnt signed";}
 				};
-				//class FailRobotExeption() : public std::exception
-			//	{
-		//			const char *what() const throw() {return "FAIL robotization";}
-	//			};
 };
 
 std::ostream &operator<<(std::ostream &o, AForm const &rhs);

@@ -6,7 +6,7 @@
 /*   By: malbrand <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/13 17:24:01 by malbrand          #+#    #+#             */
-/*   Updated: 2022/07/13 18:53:28 by malbrand         ###   ########.fr       */
+/*   Updated: 2022/07/14 07:45:20 by malbrand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@
 # include <iostream>
 # include <exception>
 # include "Bureaucrat.class.hpp"
+
+class Bureaucrat ;
 
 class Form
 {
@@ -43,11 +45,11 @@ class Form
 
 				class GradeTooHighException : public std::exception
 				{
-					const char *what() const throw() {return "Grade is too high !!";}
+					const char *what() const throw() {return "Form : Grade is too high !!";}
 				};
 				class GradeTooLowException : public std::exception
 				{
-					const char *what() const throw() {return "Grade is too low !!";}
+					const char *what() const throw() {return "Form : Grade is too low !!";}
 				};
 };
 
