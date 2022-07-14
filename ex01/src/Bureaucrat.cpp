@@ -47,7 +47,7 @@ void	Bureaucrat::upGrade(void)
 	if (this->_grade > 1)
 		this->_grade--;
 	else
-		std::cout << "You can't up grade " << _name << ", grade is too high." << std::endl;
+		throw Bureaucrat::GradeTooHighException();
 	return ;
 }
 
@@ -56,7 +56,7 @@ void	Bureaucrat::downGrade(void)
 	if (this->_grade < 150)
 		this->_grade++;
 	else
-		std::cout << "You can't down grade " << _name << ", grade is too low." << std::endl;
+		throw Bureaucrat::GradeTooLowException();
 	return ;
 }
 
@@ -88,7 +88,7 @@ void	Bureaucrat::signForm(Form &form) const
 
 std::ostream	&operator<<(std::ostream &o, const Bureaucrat &bureaucrat)
 {
-	o << bureaucrat.getName() << ", grade " << bureaucrat.getGrade();
+	o << bureaucrat.getName() << ", bureaucrat grade " << bureaucrat.getGrade();
 	return (o);
 }
 
