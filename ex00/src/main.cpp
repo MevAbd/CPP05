@@ -6,7 +6,7 @@
 /*   By: malbrand <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/13 11:58:54 by malbrand          #+#    #+#             */
-/*   Updated: 2022/07/13 17:29:48 by malbrand         ###   ########.fr       */
+/*   Updated: 2022/07/15 21:52:17 by malbrand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,6 +66,7 @@ void	lessThanMin(void)
 }
 int	main(void)
 {
+	std::cout << "****************************************SIMPLE TEST****************************************" << std::endl;
 	try
 	{
 		instantiate();	
@@ -75,6 +76,7 @@ int	main(void)
 		std::cout << e.what() << std::endl;
 	}
 	std::cout << std::endl;
+	std::cout << "********************************************GRADE INCREMENTATION************************************" << std::endl;
 	try
 	{
 		moremore();
@@ -84,6 +86,7 @@ int	main(void)
 		std::cout << e.what() << std::endl;
 	}
 	std::cout << std::endl;
+	std::cout << "********************************************GRADE DECREMENTATION************************************" << std::endl;
 	try
 	{
 		lessless();
@@ -93,6 +96,7 @@ int	main(void)
 		std::cout << e.what() << std::endl;
 	}
 	std::cout << std::endl;
+	std::cout << "********************************************MORE THAN MAX************************************" << std::endl;
 	try
 	{
 		moreThanMax();
@@ -102,6 +106,7 @@ int	main(void)
 		std::cout << e.what() << std::endl;
 	}
 	std::cout << std::endl;
+	std::cout << "********************************************LESS THAN MAX************************************" << std::endl;
 	try
 	{
 		lessThanMin();
