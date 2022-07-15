@@ -6,7 +6,7 @@
 /*   By: malbrand <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/13 11:58:54 by malbrand          #+#    #+#             */
-/*   Updated: 2022/07/14 13:52:41 by malbrand         ###   ########.fr       */
+/*   Updated: 2022/07/15 21:55:44 by malbrand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -148,6 +148,7 @@ int	main(void)
 	{
 		std::cout << e.what() << std::endl;
 	}
+	std::cout << std::endl;
 	std::cout << "------------------------SHRUBBERY PEUT EXECUTER-------------------------------------" << std::endl;
 	try
 	{
@@ -157,6 +158,7 @@ int	main(void)
 	{
 		std::cout << e.what() << std::endl;
 	}
+	std::cout << std::endl;
 	std::cout << "-------------------------------SHRUBBERY NE PEUT PAS EXECUTER-------------------------------------" << std::endl;
 	try
 	{
@@ -166,6 +168,7 @@ int	main(void)
 	{
 		std::cout << e.what() << std::endl;
 	}
+	std::cout << std::endl;
 	std::cout << "-------------------------------ROBOT NE PEUT PAS EXECUTER-------------------------------------" << std::endl;
 	try
 	{
@@ -175,6 +178,7 @@ int	main(void)
 	{
 		std::cout << e.what() << std::endl;
 	}
+	std::cout << std::endl;
 	for (int i = 0; i < 10; i++)
 	{
 		std::cout << "-------------------------------ROBOT PEUT EXECUTER-------------------------------------" << std::endl;
@@ -186,7 +190,9 @@ int	main(void)
 		{
 			std::cout << e.what() << std::endl;
 		}
+		std::cout << std::endl;
 	}
+	std::cout << std::endl;
 	std::cout << "-------------------------------PRESIDENTIAL NE PEUT PAS EXECUTER-------------------------------------" << std::endl;
 	try
 	{
@@ -196,6 +202,7 @@ int	main(void)
 	{
 		std::cout << e.what() << std::endl;
 	}
+	std::cout << std::endl;
 	std::cout << "-------------------------------PRESIDENTIAL PEUT EXECUTER-------------------------------------" << std::endl;
 	try
 	{
@@ -205,6 +212,7 @@ int	main(void)
 	{
 		std::cout << e.what() << std::endl;
 	}
+	std::cout << std::endl;
 	std::cout << "-------------------------------BUREAUCRAT PEUT EXECUTER-------------------------------------" << std::endl;
 	try
 	{
@@ -214,6 +222,7 @@ int	main(void)
 	{
 		std::cout << e.what() << std::endl;
 	}
+	std::cout << std::endl;
 	std::cout << "-------------------------------BUREAUCRAT NE PEUT PAS EXECUTER-------------------------------------" << std::endl;
 	try
 	{
